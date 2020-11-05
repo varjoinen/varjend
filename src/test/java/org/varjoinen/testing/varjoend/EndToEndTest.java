@@ -1,34 +1,9 @@
-# Varjoend
+package org.varjoinen.testing.varjoend;
 
-A lightweight end-to-end process testing library for the Java ecosystem.
+import org.junit.jupiter.api.Test;
 
-This is an early proof of concept version, not released to any maven repository.
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-## Quickstart
-
-Checkout the repository and build the library:
-
-```bash
-git checkout git@github.com:varjoinen/varjend.git
-cd varjoend
-./mvnw install
-
-```
-
-Add library as dependency:
-
-```xml
-<dependency>
-    <groupId>org.varjoinen.testing</groupId>
-    <artifactId>varjoend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <scope>test</scope>
-</dependency>
-```
-
-Create a test:
-
-```java
 public class EndToEndTest {
 
     @Test
@@ -65,11 +40,3 @@ public class EndToEndTest {
         ctx.setVariable("count", count + 1);
     }
 }
-```
-
-## Development
-
-Project has following dependencies:
-
-* [Maven](https://maven.apache.org)
-* [Lombok](https://projectlombok.org)

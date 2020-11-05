@@ -10,20 +10,41 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>End-to-end testing library for Java ecosystem</description>
+    <description>End-to-end testing library for the Java ecosystem</description>
     <packaging>jar</packaging>
 
     <properties>
         <encoding>UTF-8</encoding>
         <java.version.source>1.8</java.version.source>
         <java.version.target>1.8</java.version.target>
+        <dependency.lombok.version>1.18.16</dependency.lombok.version>
+        <dependency.junit.version>5.7.0</dependency.junit.version>
+        <dependency.mockito.version>3.6.0</dependency.mockito.version>
         <plugins.maven.compiler.version>3.8.1</plugins.maven.compiler.version>
         <plugins.maven.resources.version>3.2.0</plugins.maven.resources.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${dependency.lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${dependency.junit.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${dependency.mockito.version}</version>
+        </dependency>
     </dependencies>
 
 
